@@ -14,7 +14,12 @@ function moveZero(arr) {
     // if the element is zero
     if (arr[i] == 0) {
       // swap the element position to the end
-      [arr[i], arr[lastEl]] = [arr[lastEl], arr[i]];
+      // [arr[i], arr[lastEl]] = [arr[lastEl], arr[i]];
+
+      // remove zero at i
+      arr.splice(i, 1);
+      // push to the end
+      arr.push(0);
 
       // decrement the pointer / move left
       lastEl--;
