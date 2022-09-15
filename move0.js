@@ -5,7 +5,11 @@
  * OUTPUT: [1, 3, 12, 0, 0]
  * */
 
-function moveZero(arr) {
+// solution 1:
+// spice only remove 0 at n
+// if data = [1, 0, 0] and n = 1.
+// result = 1, 0 the other 0 did not get remove.
+function moveZeroSplice(arr) {
   // point to the last element
   let lastEl = arr.length - 1;
 
@@ -16,7 +20,7 @@ function moveZero(arr) {
       // swap the element position to the end
       // [arr[i], arr[lastEl]] = [arr[lastEl], arr[i]];
 
-      // remove zero at i
+      // remove the forst zero
       arr.splice(i, 1);
       // push to the end
       arr.push(0);
@@ -29,8 +33,31 @@ function moveZero(arr) {
   return arr;
 }
 
-const numEl1 = [0, 1, 0, 3, 12];
+// solution 2:
+function moveZeroFilter(arr){
+  if (arr.length < 1) return arr;
 
-const moveToEnd = moveZero(numEl1);
+  let arrInp = arr;
+  // collecting all zeros.
+  let arrZero = arrInp.filter(i => i === 0);
+  // collecting other than zero.
+  let arrNotZero = arrInp.filter(i => i !== 0);
 
-console.log(moveToEnd);
+  for (i of arrZero) {
+    arrNotZero.push(i);
+  }
+  return arrNotZero;
+}
+
+const arr1 = [0, 1, 0, 3, 12];
+const arr2 = [1, 0, 3, 12, 0, 0, 1]; 
+const arr3 = [1, 0, 0, 3, 12, 0, 0, 0, 1]; 
+
+console.log('solution 1:');
+console.log(moveZeroSplice(arr1));
+console.log(moveZeroSplice(arr2));
+console.log(moveZeroSplice(arr3));
+console.log('solution 2:');
+console.log(moveZeroFilter(arr1));
+console.log(moveZeroFilter(arr2));
+console.log(moveZeroFilter(arr3));
