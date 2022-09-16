@@ -34,14 +34,14 @@ function moveZeroSplice(arr) {
 }
 
 // solution 2:
-function moveZeroFilter(arr){
+function moveZeroFilter(arr) {
   if (arr.length < 1) return arr;
 
   let arrInp = arr;
   // collecting all zeros.
-  let arrZero = arrInp.filter(i => i === 0);
+  let arrZero = arrInp.filter((i) => i === 0);
   // collecting other than zero.
-  let arrNotZero = arrInp.filter(i => i !== 0);
+  let arrNotZero = arrInp.filter((i) => i !== 0);
 
   for (i of arrZero) {
     arrNotZero.push(i);
@@ -50,14 +50,14 @@ function moveZeroFilter(arr){
 }
 
 const arr1 = [0, 1, 0, 3, 12];
-const arr2 = [1, 0, 3, 12, 0, 0, 1]; 
-const arr3 = [1, 0, 0, 3, 12, 0, 0, 0, 1]; 
+const arr2 = [1, 0, 3, 12, 0, 0, 1];
+const arr3 = [1, 0, 0, 3, 12, 0, 0, 0, 1];
 
-console.log('solution 1:');
+console.log("solution 1:");
 console.log(moveZeroSplice(arr1));
 console.log(moveZeroSplice(arr2));
 console.log(moveZeroSplice(arr3));
-console.log('solution 2:');
+console.log("solution 2:");
 console.log(moveZeroFilter(arr1));
 console.log(moveZeroFilter(arr2));
 console.log(moveZeroFilter(arr3));
