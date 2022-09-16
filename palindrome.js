@@ -13,6 +13,7 @@ function palindromeCaseSensitive(arr) {
 
 console.log(`\nCase Sensitive:`);
 console.log("r: ", palindromeCaseSensitive("r"));
+console.log("ab: ", palindromeCaseSensitive("ab"));
 console.log("Radar: ", palindromeCaseSensitive("Radar"));
 console.log("radar: ", palindromeCaseSensitive("radar"));
 console.log("bed: ", palindromeCaseSensitive("bed"));
@@ -24,13 +25,11 @@ console.log("nurses run: ", palindromeCaseSensitive("nurses run"));
 
 // not case sensitive
 function palindromeNotCaseSensitive(arr) {
-  let arrIn = arr.replace(" ", "").trim();
+  let arrIn = arr.replace(" ", "").trim().toLowerCase();
   let arrLen = arrIn.length;
   if (arrLen < 2) return "Palindrome";
 
-  let arrLower = arrIn.toLowerCase();
-
-  if (arrLower[0] !== arrLower[arrLen - 1]) {
+  if (arrIn[0] !== arrIn[arrLen - 1]) {
     return "Not Palindrome";
   }
 
@@ -39,6 +38,7 @@ function palindromeNotCaseSensitive(arr) {
 
 console.log(`\nNot Case Sensitive:`);
 console.log("r: ", palindromeNotCaseSensitive("r"));
+console.log("ab: ", palindromeNotCaseSensitive("ab"));
 console.log("Radar: ", palindromeNotCaseSensitive("Radar"));
 console.log("radar: ", palindromeNotCaseSensitive("radar"));
 console.log("bed: ", palindromeNotCaseSensitive("bed"));
@@ -46,5 +46,4 @@ console.log("wing: ", palindromeNotCaseSensitive("wing"));
 console.log("hair: ", palindromeNotCaseSensitive("hair"));
 console.log("bob: ", palindromeNotCaseSensitive("bob"));
 console.log("madam: ", palindromeNotCaseSensitive("madam"));
-// nurses run suppose to return a Palindrome
 console.log("nurses run: ", palindromeNotCaseSensitive("nurses run"));
