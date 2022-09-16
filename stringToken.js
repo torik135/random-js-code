@@ -10,13 +10,15 @@ function stringToken(str) {
   // split input str with special chars.
   let strSplit = strInp.split(specChars); //typeof obj
   // get str count withut empty space ('').
-  let strCount = strSplit.filter(x => {if(x !== '') return x}).length;
+  let strCount = strSplit.filter((x) => {
+    if (x !== "") return x;
+  }).length;
   let strWCount = [strCount, ...strSplit];
   // get the value
   let result = Object.values(strWCount);
 
-  return result.filter(x => {
-    if(x !== '') return x;
+  return result.filter((x) => {
+    if (x !== "") return x;
   });
 }
 
