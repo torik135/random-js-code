@@ -26,7 +26,6 @@ console.log("bed: ", palindromeCaseSensitive("bed"));
 console.log("wing: ", palindromeCaseSensitive("wing"));
 console.log("hair: ", palindromeCaseSensitive("hair"));
 console.log("bob: ", palindromeCaseSensitive("bob"));
-console.log("bob: ", palindromeCaseSensitive("bob"));
 console.log("madam: ", palindromeCaseSensitive("madam"));
 console.log("nurses run: ", palindromeCaseSensitive("nurses run"));
 
@@ -37,7 +36,6 @@ console.log("radar: ", palindromeNotCaseSensitive("radar"));
 console.log("bed: ", palindromeNotCaseSensitive("bed"));
 console.log("wing: ", palindromeNotCaseSensitive("wing"));
 console.log("hair: ", palindromeNotCaseSensitive("hair"));
-console.log("bob: ", palindromeNotCaseSensitive("bob"));
 console.log("bob: ", palindromeNotCaseSensitive("bob"));
 console.log("madam: ", palindromeNotCaseSensitive("madam"));
 console.log("nurses run: ", palindromeNotCaseSensitive("nurses run"));
