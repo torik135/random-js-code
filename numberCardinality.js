@@ -27,7 +27,7 @@ function numberCardinality(n) {
   if(nLast == 0) return 'zero';
   if(nLast == 5) return 'five';
   if(n % 2 == 0 && nLast != 0) return 'even';
-  if(n % 2 != 0 && nLast != 0) return 'odd';
+  if(n % 2 != 0 && nLast != 5) return 'odd';
 }
 
 console.log("100: ", numberCardinality(100));
